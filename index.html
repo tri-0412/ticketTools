@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quản lý Vé Sự kiện</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Quản lý Vé Sự kiện</h1>
+
+    <!-- Tab quản lý -->
+    <div class="tabs">
+      <button id="tabEvents">Sự kiện</button>
+      <button id="tabCustomers">Khách hàng</button>
+      <button id="tabTickets">Vé</button>
+    </div>
+
+    <!-- Quản lý sự kiện -->
+    <div id="events" class="tab-content">
+      <h2>Thêm Sự kiện</h2>
+      <div class="">
+        <input id="eventName" placeholder="Tên sự kiện" />
+        <button id="addEventButton" class="addEvent">Thêm</button>
+      </div>
+      <div id="eventMessage" style="color: green; margin-top: 10px"></div>
+      <ul id="eventList"></ul>
+    </div>
+
+    <!-- Quản lý khách hàng -->
+    <div id="customers" class="tab-content" style="display: none">
+      <h2>Thêm Khách hàng</h2>
+      <input id="customerName" placeholder="Tên khách hàng" />
+      <input id="customerAge" placeholder="Tuổi" type="number" />
+      <input id="customerPhone" placeholder="SĐT" />
+      <input id="customerEmail" placeholder="Email" />
+      <input id="customerUsername" placeholder="Username" />
+      <input id="customerPassword" placeholder="Password" type="password" />
+      <div id="customerMessage" style="color: green; margin-top: 10px"></div>
+      <button id="addCustomerButton">Thêm</button>
+      <ul id="customerList"></ul>
+    </div>
+
+    <!-- Quản lý vé -->
+    <div id="tickets" class="tab-content" style="display: none">
+      <h2>Thêm Vé</h2>
+      <select id="eventSelect"></select>
+      <input id="ticketType" placeholder="Loại vé" />
+      <select id="customerSelect"></select>
+      <button id="addTicketButton">Thêm</button>
+      <div id="ticketMessage" style="color: green; margin-top: 10px"></div>
+      <ul id="ticketList"></ul>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

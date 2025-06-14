@@ -1,0 +1,54 @@
+{
+  "name": "tickettools",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Ứng dụng quản lí vé sự kiện",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.6.0",
+    "dotenv": "^16.4.7",
+    "firebase-admin": "^13.2.0",
+    "mysql2": "^3.14.0",
+    "nodemailer": "^6.10.0",
+    "qrcode": "^1.5.4",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "electron": "^35.0.3",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.tickettools.id",
+    "productName": "TicketTools",
+    "copyright": "Copyright © 2025",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer.js",
+      "qrGenerator.js",
+      "database.js",
+      "emailService.js",
+      "index.html",
+      "styles.css",
+      "node_modules/**/*",
+      "static/**/*",
+      "assets/**/*",
+      ".env"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    }
+  }
+}

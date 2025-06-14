@@ -1,0 +1,260 @@
+/* Reset mặc định và thiết lập font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: #f9fafb; /* Nền xám nhạt */
+  padding: 30px;
+  color: #34495e; /* Màu chữ chính */
+}
+
+/* Container chính để căn giữa nội dung */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Tiêu đề chính */
+h1 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c3e50; /* Xanh dương đậm */
+  margin-bottom: 30px;
+}
+
+/* Tabs (Nút chuyển đổi giữa các tab) */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  background-color: #ecf0f1; /* Nền xám nhạt */
+  color: #34495e;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tabs button:hover {
+  background-color: #3498db; /* Xanh dương khi hover */
+  color: #ffffff;
+}
+
+.tabs button.active {
+  background-color: #3498db; /* Xanh dương khi được chọn */
+  color: #ffffff;
+}
+
+/* Tab content (Card cho từng phần) */
+.tab-content {
+  background-color: #ffffff; /* Nền trắng cho card */
+  border: 1px solid #e5e7eb; /* Viền xám nhạt */
+  border-radius: 8px;
+  padding: 40px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Bóng đổ nhẹ */
+  max-width: 750px; /* Thêm max-width để thu nhỏ chiều ngang */
+  margin-left: auto; /* Căn giữa */
+  margin-right: auto; /* Căn giữa */
+}
+
+/* Tiêu đề phụ (Thêm Sự kiện, Thêm Khách hàng, Thêm Vé) */
+.tab-content h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+/* Ô nhập liệu (input, select) */
+input,
+select {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #1a1a1a;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #3498db; /* Viền xanh dương khi focus */
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3); /* Hiệu ứng sáng nhẹ */
+}
+.addEvent {
+  margin-left: 20px;
+}
+/* Nút bấm */
+button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Nút "Thêm" và "Cập nhật" */
+button[id$="Button"] {
+  background-color: #2ecc71;
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+/* Danh sách sự kiện */
+#eventList {
+  margin-top: 20px;
+}
+
+#eventList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  margin: 5px 0;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+#eventList li span {
+  flex: 1;
+}
+
+#eventList li button {
+  margin-left: 10px;
+  padding: 5px 10px;
+}
+
+#eventList li button:first-of-type {
+  background-color: #e74c3c; /* Màu đỏ cho nút Xóa */
+  color: #ffffff;
+}
+
+#eventList li button:last-of-type {
+  background-color: #f39c12; /* Màu cam cho nút Sửa */
+  color: #ffffff;
+}
+/* Thêm khách hàng  */
+#customerList {
+  margin-top: 20px;
+}
+
+#customerList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  margin: 5px 0;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+#customerList li span {
+  flex: 1;
+}
+
+#customerList li button {
+  margin-left: 10px;
+  padding: 5px 10px;
+}
+
+#customerList li button:first-of-type {
+  background-color: #e74c3c; /* Màu đỏ cho nút Xóa */
+  color: #ffffff;
+}
+
+#customerList li button:last-of-type {
+  background-color: #f39c12; /* Màu cam cho nút Sửa */
+  color: #ffffff;
+}
+#addCustomerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Thông báo */
+#eventMessage,
+#customerMessage,
+#ticketMessage {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Danh sách (ul, li) */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+li {
+  padding: 10px;
+  background-color: #f9fafb; /* Nền xám nhạt cho từng item */
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  margin: 5px 0;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+/* Thông báo (message) */
+#eventMessage,
+#customerMessage,
+#ticketMessage {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #2ecc71; /* Xanh lá cho thông báo thành công */
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .tabs button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .tab-content {
+    padding: 15px;
+  }
+
+  input,
+  select {
+    max-width: 100%;
+  }
+}
